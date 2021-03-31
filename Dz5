@@ -1,0 +1,10 @@
+stack_plate= []
+print('\nСтак тарелок :', stack_plate)
+print('\nДобавление тарелок в стак....')
+for x in range(5):
+    stack_plate.append(x)
+    print('так тарелок :', stack_plate,'\tРазмер стака :', len(stack_plate))
+print('\nУдаление тарелок из стака....')
+while len(stack_plate) > 4:
+    stack_plate.pop()
+    print('Конечный стак тарелок :', stack_plate)

@@ -1,0 +1,32 @@
+"""Задание 2
+1 алгоритм
+Сложность O(N)"""
+
+lst = [12, 4, 7, -4, -10] # O(1)
+mins = lst[0]             # o(1)
+for i in lst[1::]:        # o(n)
+    if i < mins:          # o(1)
+        mins = i          # o(1)
+print(mins)
+
+#######################################
+
+"""Алгоритм 2 
+ Сложность O(N^2)"""
+
+
+def myenumerate(l, start=0, stop=None, step=1):
+    if stop is None:
+        stop = len(l)
+    for i in range(start, stop, step):
+        yield i, l[i]
+
+
+lst = [12, 4, 7, -4, -10]
+
+mins = lst[0]
+for i, x in myenumerate(lst, 1):
+    if x < mins:
+        mins = x
+
+print(mins)
